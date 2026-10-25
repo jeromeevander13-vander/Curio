@@ -879,6 +879,6 @@ const styles = StyleSheet.create({
     color: '#718078',
     fontSize: 18,
     marginTop: 17,
-    marginLeft: 2,
+    marginLeft: 3,
   },
 });
