@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# CURIO
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+CURIO is a trivia quiz app built to make exploring new topics simple and enjoyable. Choose a subject, pick a difficulty, and play a short multiple-choice quiz at your own pace.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **15 trivia subjects**, including General Knowledge, Science, Computers / Programming, Logical Reasoning & Math, Geography, English & Literature, History, Mythology, Sports, Animals, Art, Video Games, Film, Music, and Board Games.
+- **Three difficulty settings:** Easy, Medium, and Hard. These describe general trivia difficulty and do not correspond to school grade levels or curriculum.
+- **Flexible quiz length:** Choose between 1 and 50 questions.
+- **Multiple-choice questions:** Select from four answers, with feedback after each choice.
+- **Progress and scoring:** Follow your progress during the quiz and see your final score when you finish.
+- **Reading controls:** Adjust question text size while playing.
+- **Retry support:** Try loading questions again if the trivia service or network is unavailable.
+- **Responsive interface:** Built with React Native and Expo for mobile and web.
 
-   ```bash
-   npm install
-   ```
+Questions are loaded from the [Open Trivia Database](https://opentdb.com/), so an internet connection is required to play. Question availability depends on the selected subject and difficulty.
 
-2. Start the app
+## Getting started
 
-   ```bash
-   npx expo start
-   ```
+### Requirements
 
-In the output, you'll find options to open the app in a
+- Node.js and npm
+- An internet connection
+- Expo Go, an Android emulator, an iOS simulator, or a web browser
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Install and run
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+From the project directory:
 
 ```bash
-npm run reset-project
+npm install
+npm start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then use the Expo terminal shortcuts to open the app on Android, iOS, or web. You can also start a specific platform with:
 
-## Learn more
+```bash
+npm run android
+npm run ios
+npm run web
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+## Development
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Run the project linter with:
 
-## Join the community
+```bash
+npm run lint
+```
 
-Join our community of developers creating universal apps.
+To check TypeScript types:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npx tsc --noEmit
+```
+
+## Project structure
+
+```text
+src/
+  app/
+    _layout.tsx   # App navigation layout
+    index.tsx     # Home screen and quiz setup
+    quiz.tsx      # Quiz questions, answers, and results
+assets/
+  images/         # App icons and images
+components/       # Reusable interface components
+```
+
+The app uses Expo Router for navigation. The home screen collects the quiz settings and passes them to the quiz screen, which requests and presents the questions.
