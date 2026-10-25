@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CURIO
 
 CURIO is a trivia quiz app built to make exploring new topics simple and enjoyable. Choose a subject, pick a difficulty, and play a short multiple-choice quiz at your own pace.
@@ -68,3 +69,7 @@ components/       # Reusable interface components
 ```
 
 The app uses Expo Router for navigation. The home screen collects the quiz settings and passes them to the quiz screen, which requests and presents the questions.
+=======
+# Curio
+Curio is an quiz application made by TeamBilog the purpose of these applicaiton is to have fun and learn new things.
+>>>>>>> d3f1a291b16375c516319dba4e4820e46982d8cf
